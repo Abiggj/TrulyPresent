@@ -28,4 +28,4 @@ class AttendanceResource(Resource):
 api.add_resource(AttendanceResource, '/attendance')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='192.168.1.16', port=5000, debug=True)

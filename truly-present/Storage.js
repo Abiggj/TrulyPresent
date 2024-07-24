@@ -34,7 +34,7 @@ app.post('/storeResponse', async (req, res) => {
     const response = new Response({ username, date, apiResponse });
     await response.save();
 
-    const path = '/home/abiggj/Projects/Web/truly-present/attendanceFiles/';
+    const path = './attendanceFiles/';
 
     // Check if the directory exists, create it if not
     if (!fs.existsSync(path)) {
@@ -60,6 +60,6 @@ app.post('/storeResponse', async (req, res) => {
   }
 });
 
-app.listen(port, '192.168.160.121', () => {
+app.listen(port, '10.44.17.45', () => {
   console.log(`Server is running on port ${port}`);
 });

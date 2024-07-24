@@ -73,7 +73,7 @@ const AttendanceScreen = ({ route, navigation }) => {
       formData.append('date', classDetails.date);
 
       const response = await axios.post(
-        'http://192.168.160.121:5000/attendance',
+        'http://10.44.17.45:5000/attendance',
         formData,
         {
           headers: {
@@ -82,7 +82,7 @@ const AttendanceScreen = ({ route, navigation }) => {
         }
       );
       const storing = await axios.post(
-        'http://192.168.160.121:7000/storeResponse',
+        'http://10.44.17.45:7000/storeResponse',
         {
           username,
           date: classDetails.date,
